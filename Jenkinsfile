@@ -26,8 +26,8 @@ pipeline {
                 }
             }
         }  
-        
-   stage('SAST'){
+   // FortiDevSec     
+   stage('SAST') {
        steps { 
            env | grep -E "JENKINS_HOME|BUILD_ID|GIT_BRANCH|GIT_COMMIT" > /tmp/env
            docker pull registry.fortidevsec.forticloud.com/fdevsec_sast:latest
